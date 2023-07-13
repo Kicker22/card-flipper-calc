@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Calculate</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- external CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Optional JavaScript -->
+
+    <script src="https://kit.fontawesome.com/adb19d7eeb.js" crossorigin="anonymous"></script>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Flip'N</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="comingsoon.html">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="comingsoon.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">The Flip'N Calculator</h1>
+            <br>
+            <p>Before selling a card, it makes sense to figure out what you would need to sell it for in order to make a
+                profit or at least break even. The boring and tedious part is doing the math to account for all the fees
+                that Ebay and Mercari will charge you. With our Flip'N Calculator you will no longer need to do
+                that math becuase we have done it for you!</p>
+            <p>
+                <h4><strong>How it works:</strong></h4>
+            </p>
+            <ol> In 1 simple step, the Flip'N Calculator will give you the price you need to sell your card at
+                in order to make a profit.
+                <li>Enter the dollar amount you have invested in the card and press enter.</li>
+            </ol>
+        </div>
+    </div>
+
+
+
+    <div class="container calc-container">
+        <h1 id="calcHeader" class="text-center">Get the Numbers</h1>
+        <div class="container text-center">
+            <form id="profitCalc" name="calculator" class="form-group calc">
+                <label for="purchasedPrice">Enter Investment Price Here</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                    <input class="form-control currency" id="userInput" type="number" value="100.00" min="0" step="0.01"
+                        data-number-to-fixed="2" data-number-stepfactor="100">
+                </div>
+
+                <div class="btn calcBtn">
+                    <input class="btn btn-dark btn-lg" type="submit" value="Calculate">
+                </div>
+            </form>
+        </div>
+
+        <!-- this will show a loader before results -->
+        <div id="loading" class="container">
+
+            <img height="150px"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fb1%2FLoading_icon.gif&f=1&nofb=1"
+                alt="">
+        </div>
+
+        <div id="resultsContainer" class="results-container container mt-3">
+            <h2 id="resultsFiller" class="text-center results-filler "></h2>
+        </div>
+    </div>
+    <h1 id="profitHeader">Profit Percentages</h1>
+
+
+    <!-- Actual results -->
+    <div id="results" class="resultsContainer container"></div>
+
+
+    <div class="container fees-container">
+        <h5 class="font-weight-bold">The Flip'N Calculator takes into account the following fees associated with selling through Ebay and Mercari</h5>
+        <ul>
+            <li>Final Value Fee (Ebay/Mercari) = 10% </li>
+            <li>Paypal Transaction Fee / Mercari Transaction Fee = 2.9% + $0.30</li>
+        </ul>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="section-footer">
+        <div class="container">
+            <div>
+                <h2>Social Media</h2>
+                <a class=" nav-link disabled" href="http://twitter.com">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a class=" nav-link disabled" href="http://facebook.com">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a  class="nav-link"href="https://www.instagram.com/utcardcollecting/" target="none">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
+            <div>
+                <h3>Company Links</h3>
+                <ul class="companyLinks">
+                    <li><a class=" nav-link disabled"href="#">Contact</a></li>
+                    <li><a class="nav-link disabled" href="#">About Us</a></li>
+                    <li><a class=" nav-link disabled"href="#">Privacy Policy</a></li>
+                    <li><a class=" nav-link disabled"href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Subscribe</h3>
+                <p>(comming soon)</p>
+                <form action="/subscribe/add" method="POST">
+                    <div class="email-form">
+                        <span class="form-control-wrap">
+                            <input type="email" name="subscriber_email" id="email" size="40" class="form-control"
+                                placeholder="email" />
+                        </span>
+                        <button type="submit" value="Subscribe" class="form-control submit" disabled>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- add external JS -->
+    <script src="./calculator.js"></script>
+
+</body>
+
+</html>

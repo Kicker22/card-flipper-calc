@@ -1,0 +1,330 @@
+:root{
+    --primary-color: #333;
+    --secondary-color: #444;
+    --overlay-color: rgba(0, 0, 0, 0.582);
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: 'Cardo', serif;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;  
+    background: whitesmoke;
+}
+
+   h1, h2, h3, h4, h5, h6{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+   }
+
+a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+}
+
+a.navbar-brand{
+    font-size: 24px;
+}
+
+.jumbotron-fluid{
+    background:linear-gradient(0deg,rgba(255, 255, 255, 0.767),rgba(255, 255, 255, 0.788)),url(images/calc.jpg);
+    background: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: larger;
+    color: black;
+    text-align: center;
+}
+
+.display-4{
+    color: darkgreen;
+}
+
+
+.calc-container{ 
+    height: 21rem;
+    margin-top: 5rem;
+    padding: 0;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px 0px rgb(0, 0, 0);
+
+}
+
+#loading,#results,#profitHeader{
+    display: none;
+}
+#profitHeader{
+    text-align: center;
+    border-radius: 15PX;
+    margin-top: 4rem;
+}
+
+
+#loading{
+    text-align: center;
+}
+
+
+.results-filler{
+    margin-top:  5rem ;
+}
+
+
+
+#calcHeader{
+    padding: 1rem;
+    background-color: lightgrey;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid black;
+}
+
+
+
+.calcResults{
+    margin-top: 1.5rem;
+}
+
+
+.calc{
+    margin: 0 auto;
+    width: 20%;
+}
+
+.fees-container{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+ul{
+    display: inline-block;
+    text-align: left;
+  }
+
+ol{
+    display: inline-block;
+    list-style-position: inside;
+}
+
+.btn{
+    margin-top: 0.5rem;
+}
+
+
+/* results cards */
+
+.resultsContainer{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card{
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: larger;
+    width: 20rem;
+    height: 21rem;
+    padding: 1rem;
+    border-radius: 40px;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.253), 3px 3px 20px 5px rgba(32, 28, 28, 0.116);
+}
+
+.textDiv{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; */
+}
+
+.card-title{
+    margin-bottom: 1rem;
+}
+
+hr{
+    border-top: 3px solid #333;
+}
+
+
+.card-body{
+    background:linear-gradient(0deg,rgba(255, 255, 255, 0.842),rgba(255, 255, 255, 0.849)),url(images/money.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-text{
+    font-size: 32px;
+    color: darkgreen;
+    font-weight: 800;
+}
+
+.card-sellText{
+    font-size: 18px;
+    color: black;
+    margin-bottom: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.card-prof{
+    font-size: 32px;
+    color: darkgreen;
+    font-weight: 800;
+}
+
+.card-profText{
+    font-size: 18px;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+/* Footer */
+.nav-links { 
+ 
+}
+
+.section-footer{
+    background: var(--primary-color);
+    color: #fff;
+    padding: 4rem 0;
+}
+
+.section-footer .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+
+}
+
+.section-footer h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.section-footer h3{
+    margin-bottom: 0.7rem;
+}
+
+.section-footer a{
+    line-height: 1.9;
+    color: #ccc;
+}
+
+.section-footer a > i{
+    color: #555;
+    margin-right: 0.5rem;
+}
+
+.companyLinks{
+    list-style-type: none;
+}
+
+/* email form */
+.email-form{
+    width: 100%;
+    display: inline-block;
+    background-color: #555;
+    position: relative;
+    border-radius: 20px;
+    line-height: 0;
+    margin-top: 1rem;
+}
+
+.email-form .form-control{
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    color: #ddd;
+    background-color: transparent;
+    font-family: inherit;
+    margin:0;
+    padding: 0 3rem 0 1.5rem;
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.email-form .submit{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #eee;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: rgb(66, 66, 66);
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+
+}
+
+
+/* Media Queries */
+@media(max-width: 700px){
+    #profitCalc{
+        width: 75%;
+    }
+
+    .jumbotron-fluid{
+        background: contain;
+        background-position: left;
+    }
+    .calc-container{
+        height: fit-content;
+    }
+    .section-footer {
+        padding: 2rem 0 ;
+    }
+
+    .section-footer .container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    /* .section-footer ul{
+        display: none;
+    } */
+
+    .email-form .submit {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        background-color: #eee;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        border: 0;
+        color: rgb(66, 66, 66);
+        cursor: pointer;
+        border-radius: 0 20px 20px 0;
+    
+    }
+}
+
